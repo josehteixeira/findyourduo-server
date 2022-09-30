@@ -39,7 +39,7 @@ app.post('/games/:id/ads', async (request, response) => {
             weekDays: body.weekDays.join(','),
             hourStart: convertHourStringToMinutes(body.hourStart),
             hourEnd: convertHourStringToMinutes(body.hourEnd),
-            userVoiceChannel: body.userVoiceChannel,
+            useVoiceChannel: body.useVoiceChannel,
         }
     })
 
@@ -54,7 +54,7 @@ app.get('/games/:id/ads', async (request, response) => {
             id: true,
             name: true,
             weekDays: true,
-            userVoiceChannel: true,
+            useVoiceChannel: true,
             yearsPlaying: true,
             hourStart: true,
             hourEnd: true,
